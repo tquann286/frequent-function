@@ -10,7 +10,7 @@ const hexaColor = () => {
     return hexa
 }
 
-// Get time 
+// Get real time updated
 function showTime(){
     let date = new Date()
     let dateNow = date.getDate()
