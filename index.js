@@ -45,3 +45,27 @@ function showTime(){
 }
 document.querySelector('.clock').style.display = 'inline-block' // Remember to create a div with class 'clock'
 setInterval(showTime, 1000)
+
+// Check Prime Number
+function checkPrimeNumber(n) {
+
+            var flag = true;
+        
+            // If n < 2 => not a prime number
+            if (n < 2){
+                flag = false;
+            } else if (n == 2){
+                flag = true;
+            } else if (n % 2 == 0){
+                flag = false;
+            } else {
+                // Loop from 3 to n - 1 with step: 2
+                for (var i = 3; i < Math.sqrt(n); i+=2) {
+                    if (n % i == 0){
+                        flag = false;
+                        break;
+                    }
+                }
+            }
+            return flag
+        }
