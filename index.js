@@ -43,3 +43,5 @@ function showTime(){
     let time = `${months[date.getMonth()]} ${dateNow}, ${year} ${h}:${m}:${s} ${session}`
     document.getElementById("DigitalCLOCK").innerHTML = time
 }
+document.querySelector('.clock').style.display = 'inline-block' // Remember to create a div with class 'clock'
+setInterval(showTime, 1000)
