@@ -60,3 +60,5 @@ function testPrime(n) {
         return true;  
     }
 }
+
+export {hexaColor, showTime, testPrime}
