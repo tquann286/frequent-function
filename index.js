@@ -77,4 +77,9 @@ objs.sort(compare)
 // Or inline (c/o Marco Demaio):
 objs.sort((a,b) => (a.key > b.key) ? 1 : ((b.key > a.key) ? -1 : 0))
 
+// Console.log
+function logger(log, type = 'log') {
+    console[type][log]
+}
+
 export {hexaColor, showTime, testPrime, compare}
