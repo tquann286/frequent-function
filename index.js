@@ -79,7 +79,7 @@ objs.sort((a,b) => (a.key > b.key) ? 1 : ((b.key > a.key) ? -1 : 0))
 
 // Console.log
 function logger(log, type = 'log') {
-    console[type](log)
+    return console[type](log)
 }
 
 // Detect click inside/outside of element with single event handler
