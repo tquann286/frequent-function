@@ -25,7 +25,7 @@ function showTime(){
         "June", "July", "August",
         "September", "October", 
         "November", "December"
-    ];
+    ]
 
     if(h == 0){
         h = 12
@@ -49,15 +49,15 @@ setInterval(showTime, 1000)
 // Check is prime number
 function testPrime(n) {
     if ( n === 1 || n === 0 ) {
-        return false;
-    } else if(n === 2)  return true; 
+        return false
+    } else if(n === 2)  return true 
     else {
         for(let x = 2; x < n; x++) {
             if(n % x === 0) {
-                return false;
+                return false
             }   
         }
-        return true;  
+        return true  
     }
 }
 
@@ -82,4 +82,13 @@ function logger(log, type = 'log') {
     console[type](log)
 }
 
-export {hexaColor, showTime, testPrime, compare}
+// Detect click inside/outside of element with single event handler
+const myElementToCheckIfClicksAreInsideOf = document.querySelector('#my-element')
+// Listen for click events on body
+document.body.addEventListener('click', function (event) {
+    if (myElementToCheckIfClicksAreInsideOf.contains(event.target)) {
+        console.log('clicked inside')
+    } else {
+        console.log('clicked outside')
+    }
+})
